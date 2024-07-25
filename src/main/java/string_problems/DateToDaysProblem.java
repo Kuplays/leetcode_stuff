@@ -21,17 +21,10 @@ public class DateToDaysProblem {
 
     private int parseInt(String s, int len)
     {
-        int num  = 0;
-        int sign = -1;
-        //final int len  = s.length();
-        final char ch  = s.charAt(0);
-        if (ch == '-')
-            sign = 1;
-        else
-            num = '0' - ch;
-        int i = 0;
+        int num  = '0' - s.charAt(0);
+        int i = 1;
         while (i < len)
             num = num * 10 + '0' - s.charAt(i++);
-        return sign * num;
+        return -1 * num;
     }
 }
